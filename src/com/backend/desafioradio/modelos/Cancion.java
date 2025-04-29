@@ -1,6 +1,6 @@
 package com.backend.desafioradio.modelos;
 
-public class Cancion extends Audio {
+public class Cancion extends Audio implements IMostrar {
     private String album;
     private String cantante;
     private String genero;
@@ -14,9 +14,12 @@ public class Cancion extends Audio {
     //reescribo para mantener la base limpia
     @Override
     public void mostrarFicha() {
-            super.mostrarFicha();
-            System.out.println("Cantante: " + cantante);
-            System.out.println("Album: " + album);
+        System.out.println("🎵 Canción: " + getTitulo());
+        System.out.println("👤 Cantante: " + getCantante());
+        System.out.println("💿 Álbum: " + getAlbum());
+        System.out.println("❤️ Me gusta: " + getTotalMeGusta());
+        System.out.println("▶️ Reproducciones: " + getTotalReproducciones());
+        System.out.println("-------------------------------");
     }
 
     @Override

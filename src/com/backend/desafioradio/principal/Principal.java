@@ -24,10 +24,11 @@ public class Principal {
         }
 
         miCancion.mostrarFicha();
-        System.out.println("----------------------------");
         miPodcast.mostrarFicha();
-        System.out.println("----------------------------");
-        MisFavoritos favoritos = new MisFavoritos();
 
+
+        MisFavoritos favoritos = new MisFavoritos();
+        favoritos.agrega(miCancion);
+        favoritos.agrega(miPodcast);
     }
 }

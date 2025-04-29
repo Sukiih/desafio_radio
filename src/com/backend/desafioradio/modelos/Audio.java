@@ -21,14 +21,6 @@ public class Audio {
         this.totalReproducciones++;
     }
 
-    //Evitamos crear tantos sout
-    public void mostrarFicha(){
-        System.out.println("El título es: " + titulo);
-        System.out.println("Total de reproducciones: " + totalReproducciones);
-        System.out.println("Total de Me Gusta: " + totalMeGusta);
-        System.out.println("Clasificación: " + getClasificacion());
-    }
-
     public String getTitulo() {
         return titulo;
     }

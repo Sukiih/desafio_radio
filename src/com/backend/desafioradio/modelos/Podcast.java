@@ -1,6 +1,6 @@
 package com.backend.desafioradio.modelos;
 
-public class Podcast extends Audio {
+public class Podcast extends Audio implements IMostrar {
     private String presentador;
     private String descripcion;
 
@@ -9,6 +9,13 @@ public class Podcast extends Audio {
         this.presentador = presentador;
     }
 
+    @Override
+    public void mostrarFicha() {
+        System.out.println("🎙️ Podcast: " + getTitulo());
+        System.out.println("🎤 Presentador: " + getPresentador());
+        System.out.println("❤️ Me gusta: " + getTotalMeGusta());
+        System.out.println("▶️ Reproducciones: " + getTotalReproducciones());
+    }
 
 
     @Override
